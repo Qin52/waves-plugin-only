@@ -407,7 +407,11 @@ export class Character extends plugin {
             const imageCard = await Render.render('Template/charProfile/charProfile', {
                 data: { uid, rolePicUrl, roleDetail },
             }, { e, retType: 'base64' });
+            
+            // 添加角色roleId信息
+            const roleIdInfo = `角色 ${name} 的roleId: ${char.roleId}`;
             msgList.push({ message: imageCard });
+            msgList.push({ message: roleIdInfo });
         }
 
         if (msgList.length === 0) return await e.reply('无法获取数据');
