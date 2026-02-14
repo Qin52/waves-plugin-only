@@ -165,8 +165,8 @@ export class Character extends plugin {
                 return;
             }
 
-            // 输出角色的roleId到日志
-            logger.mark(logger.blue('[WAVES PLUGIN]'), logger.green(`角色 ${name} 的roleId: ${char.roleId}`));
+            // 输出角色的roleId到日志(仅调试)
+            //logger.mark(logger.blue('[WAVES PLUGIN]'), logger.green(`角色 ${name} 的roleId: ${char.roleId}`));
 
             const detailRes = await waves.getRoleDetail(serverId, uid, char.roleId, token, did);
             if (!detailRes.status) {
@@ -408,10 +408,10 @@ export class Character extends plugin {
                 data: { uid, rolePicUrl, roleDetail },
             }, { e, retType: 'base64' });
             
-            // 添加角色roleId信息
-            const roleIdInfo = `角色 ${name} 的roleId: ${char.roleId}`;
+            // 添加角色roleId信息(仅调试)
+            //const roleIdInfo = `角色 ${name} 的roleId: ${char.roleId}`;
             msgList.push({ message: imageCard });
-            msgList.push({ message: roleIdInfo });
+            //msgList.push({ message: roleIdInfo });
         }
 
         if (msgList.length === 0) return await e.reply('无法获取数据');
