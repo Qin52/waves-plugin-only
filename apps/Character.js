@@ -165,6 +165,9 @@ export class Character extends plugin {
                 return;
             }
 
+            // 输出角色的roleId到日志
+            logger.mark(logger.blue('[WAVES PLUGIN]'), logger.green(`角色 ${name} 的roleId: ${char.roleId}`));
+
             const detailRes = await waves.getRoleDetail(serverId, uid, char.roleId, token, did);
             if (!detailRes.status) {
                 apiData.push({ error: `UID ${uid}: ${detailRes.msg}` });

@@ -27,7 +27,7 @@
 
 3. **修改远程仓库地址**
    ```bash
-   git remote set-url origin https://github.com/Xinglingsuiyue/waves-plugin.git
+   git remote set-url origin https://ghfast.top/https://github.com/Qin52/waves-plugin-only.git
    ```
 
 4. **验证修改是否成功**
@@ -36,8 +36,8 @@
    ```
    现在应该显示新的仓库地址：
    ```
-   origin  https://github.com/Xinglingsuiyue/waves-plugin.git (fetch)
-   origin  https://github.com/Xinglingsuiyue/waves-plugin.git (push)
+   origin  https://ghfast.top/https://github.com/Qin52/waves-plugin-only.git (fetch)
+   origin  https://ghfast.top/https://github.com/Qin52/waves-plugin-only.git (push)
    ```
 
 5. **从新仓库拉取更新**
