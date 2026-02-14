@@ -22,6 +22,8 @@ subProps:
     weight: 0
   - name: 共鸣解放伤害加成
     weight: 0.5
+  - name: 攻击
+    weight: 0
 mainProps:
   C4:
     - name: 暴击伤害
